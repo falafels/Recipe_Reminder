@@ -7,13 +7,13 @@ import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 
 # The session object makes use of a secret key.
-SECRET_KEY = 'a secret key!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+SECRET_KEY = '###############################'
 app = Flask(__name__)
 app.config.from_object(__name__)
 
 def edamam(food):
 
-	e = PyEdamam(recipes_appid='c413d4fa', recipes_appkey='85d27d9bb25a253ba13b13b7a1dcc19e')
+	e = PyEdamam(recipes_appid='#######', recipes_appkey='###########')
 
 	for recipe in e.search_recipe(food):
 		return recipe,recipe.url
